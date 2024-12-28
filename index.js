@@ -7,7 +7,7 @@ const { Server } = require('socket.io');
 
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174','https://chat-demo-server.vercel.app'],
+    origin: ['http://localhost:5173', 'http://localhost:5174','https://another-project-946be.web.app'],
     methods: ['GET', 'POST']
 }));
 app.use(express.json());
@@ -15,7 +15,7 @@ app.use(express.json());
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: ['http://localhost:5173', 'http://localhost:5174', 'https://chat-demo-server.vercel.app'],
+        origin: ['http://localhost:5173', 'http://localhost:5174', 'https://another-project-946be.web.app'],
         methods: ['GET', 'POST']
     }
 })
